@@ -4,14 +4,14 @@
   
   - measure: Amount
     type: sum
-    value_format: '$#,###'
+    value_format: '$0.##,, " M"'
    
     sql: ${TABLE}.AMOUNT
     drill_fields: []
 
   - measure: Opportunity_Revenue
     type: sum
-    value_format: '$#,###'
+    value_format: '$0.##,, " M"'
    
     sql: ${TABLE}.AMOUNT
     drill_fields: []
@@ -45,12 +45,12 @@
     
   - measure: Opportunity__revenue
     type: sum
-    value_format: '$#,###'
+    value_format: '$0.##,, " M"'
     sql: ${TABLE}.REVENUE
     
   - measure: revenue__
     type: sum
-    value_format: '$#,###'
+    value_format: '$0.##,, " M"'
     sql: ${TABLE}.REVENUE
     drill_fields: []
    
@@ -62,7 +62,7 @@
 
   - measure: Booked_Revenue
     type: sum
-    value_format: '$#,###'
+    value_format: '$0.##,, " M"'
     sql: ${TABLE}.REVENUE
     drill_fields: []
     links:
@@ -106,31 +106,31 @@
    
   - measure: Closed_won
     type: sum
-    value_format: '$#,###'
+    value_format: '$0.##,, " M"'
     sql: |
        case when ${TABLE}.pipeline='Closed Won' then ${TABLE}.REVENUE end
 
   - measure: Closed_lost
     type: sum
-    value_format: '$#,###'
+    value_format: '$0.##,, " M"'
     sql: |
        case when ${TABLE}.pipeline='Closed Lost' then ${TABLE}.REVENUE end
        
   - measure: Plan
     type: sum
-    value_format: '$#,###'
+    value_format: '$0.##,, " M"'
     sql: |
        case when ${TABLE}.pipeline='Plan' then ${TABLE}.REVENUE end
        
   - measure: Create
     type: sum
-    value_format: '$#,###'
+    value_format: '$0.##,, " M"'
     sql: |
        case when ${TABLE}.pipeline='Create' then ${TABLE}.REVENUE end
        
   - measure: Qualify
     type: sum
-    value_format: '$#,###'
+    value_format: '$0.##,, " M"'
     sql: |
        case when ${TABLE}.pipeline='Qualify' then ${TABLE}.REVENUE end
 
