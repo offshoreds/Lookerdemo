@@ -48,6 +48,11 @@
     value_format: '$0.##,, " M"'
     sql: ${TABLE}.REVENUE
     
+  - measure: Opportunity___revenue
+    type: sum
+    value_format: '$#,###'
+    sql: ${TABLE}.REVENUE
+    
   - measure: revenue__
     type: sum
     value_format: '$0.##,, " M"'
@@ -98,6 +103,8 @@
     type: string
     sql: ${TABLE}.pipeline
     
+
+    
   - dimension: pipeline_type
     type: string
     sql: ${TABLE}.pipeline_type
@@ -109,6 +116,7 @@
     value_format: '$0.##,, " M"'
     sql: |
        case when ${TABLE}.pipeline='Closed Won' then ${TABLE}.REVENUE end
+
 
   - measure: Closed_lost
     type: sum

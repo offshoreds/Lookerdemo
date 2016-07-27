@@ -29,6 +29,11 @@
   - dimension: statename
     type: string
     sql: ${TABLE}.STATENAME
+    
+  - dimension: location
+    map_layer: us_states
+    sql: ${TABLE}.STATENAME
+
 
   - dimension: status
     type: string

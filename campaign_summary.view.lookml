@@ -230,6 +230,7 @@
 
   - measure: total_inquiries
     type: sum
+    value_format: '#,###'
     sql: ${TABLE}.TOTAL_INQUIRIES/500
 
   - measure: total_qualified_leads

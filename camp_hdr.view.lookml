@@ -7,7 +7,10 @@
     sql: ${TABLE}.CAMPAIGN
     
     
-    
+  - dimension: program
+    type: string
+    sql:  |
+         case when ${TABLE}.PROGRAM_NAME =  'Balamb Garden Recruitment 2016' then 'abcd' else 'Opportunity Revenue' end 
   - dimension: Campaign_Name
     type: string
     sql: ${TABLE}.CAMPAIGN
@@ -84,11 +87,13 @@
   - measure: Campaign_Count
     type: count
     drill_fields: []
-    
     links: 
     - label: Campaign Details
       url: /dashboards/24?Year=&Quarter=&Parent campaign=&Campaign=&filter_config={"Year":[{"type":"%3D","values":[{"constant":""},{}],"id":0}],"Quarter":[{"type":"%3D","values":[{"constant":""},{}],"id":1}],"Parent campaign":[{"type":"%3D","values":[{"constant":""},{}],"id":2}],"Campaign":[{"type":"%3D","values":[{"constant":""},{}],"id":3}]}
       icon_url: http://www.delraycomputers.com/wp-content/uploads/2015/01/home_finance_offer_icon_4.png
+      
+      
+   
     
 
     
