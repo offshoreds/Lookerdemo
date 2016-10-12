@@ -1,5 +1,5 @@
 - view: pipeline
-  sql_table_name: C2CDB.PIPELINE
+  sql_table_name: LOOKER.PIPELINE
   fields:
 
   - dimension: booked_order

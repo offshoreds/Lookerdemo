@@ -1,5 +1,5 @@
 - view: campaign_details
-  sql_table_name: C2CDB.CAMPAIGN_DETAILS
+  sql_table_name: LOOKER.CAMPAIGN_DETAILS
   fields:
 
   - dimension: actualcost

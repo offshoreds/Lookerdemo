@@ -1,5 +1,5 @@
 - view: lead_hdr
-  sql_table_name: C2CDB.LEAD_HDR
+  sql_table_name: LOOKER.LEAD_HDR
   fields:
 
   - dimension: aging
@@ -42,6 +42,8 @@
   - dimension: sub_status
     type: string
     sql: ${TABLE}.SUB_STATUS
+    
+
 
   - dimension: wave
     type: string

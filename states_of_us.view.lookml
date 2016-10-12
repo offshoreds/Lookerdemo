@@ -7,6 +7,8 @@
     sql: ${TABLE}.STATE_CODE
 
   - dimension: us_state_name
+    label: 'states'
+    view_label: 'states'
     type: string
     sql: ${TABLE}.US_STATE_NAME
 
